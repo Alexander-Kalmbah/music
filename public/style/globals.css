@@ -1,0 +1,206 @@
+:root {
+  --theme-base:rgba(53,53,53,1);
+  --theme-distant:rgba(96,96,96,1);
+  --theme-nearest:rgba(39,39,39,1);
+  --theme-nearest-high:rgba(34,31,30,1);
+
+  --theme-main:rgba(246,247,232,1);
+  --theme-primary:rgba(246,247,232,1);
+  --theme-secondary:rgba(202,195,195,1);
+
+  --theme-selection:rgba(53,53,53,1);
+  --theme-selectionBase:rgba(246,247,232,1);
+
+  --theme-thumb:rgba(145,145,145,1);
+  --theme-track:rgba(14, 14, 14, 1);
+
+  --theme-disabled:rgba(120,120,120,1);
+  --theme-marked:rgba(252,163,17,1);
+  --theme-active:rgba(252,163,17,1);
+  --theme-link:rgba(252,163,17,1);
+  --theme-active-low:rgba(252,163,17,1);
+  --theme-active-high:rgba(252,163,17,1);
+
+  --theme-iconBase:rgba(255,255,255,1);
+  --theme-iconMain:rgba(252,163,17,1);
+
+  --theme-success: rgba(53,252,17,1);
+  --theme-warning: rgba(252,79,17,1);
+  --theme-failure: rgba(252,17,17,1);
+}
+
+/* CURSOR */
+:root {
+  --cursor-auto: auto;
+  --cursor-pointer: pointer;
+  --cursor-default: default;
+  --cursor-not-allowed: not-allowed;
+}
+/* CURSOR */
+/* ANIMATION */
+:root {
+  --animation-tf: cubic-bezier(0.5, 0, 0, 1);
+  --animation-tf-primary: cubic-bezier(0.5, 0, 0, 1);
+  --animation-tf-secondary: cubic-bezier(0.5, 0, 0, 1);
+}
+/* ANIMATION */
+/* FONT */
+:root {
+  --font-size: 20px;
+  --font-weight: 400;
+  --font-height: 100%;
+}
+/* FONT */
+
+
+/*/-[RESET]-/*/
+
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+  }
+}
+
+
+/*/-[BASE]-/*/
+
+html {
+  font-family: Main, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  font-style: normal;
+  background: #221f1e;
+  color: #cac3c3;
+}
+
+html,
+body,
+#__next {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+#__next {
+  scroll-behavior: smooth;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/*/-[GENERAL]-/*/
+::selection {
+  color: var(--theme-selection);
+  background: var(--theme-selectionBase);
+}
+::-moz-selection {
+  color: var(--theme-selection);
+  background: var(--theme-selectionBase);
+}
+
+html {
+  scrollbar-face-color: var(--theme-thumb);
+  scrollbar-base-color: var(--theme-thumb);
+  scrollbar-3dlight-color: var(--theme-thumb);
+  scrollbar-highlight-color: var(--theme-thumb);
+  scrollbar-track-color: var(--theme-track);
+  scrollbar-arrow-color: var(--theme-track);
+  scrollbar-shadow-color: var(--theme-thumb);
+  scrollbar-dark-shadow-color: var(--theme-thumb);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  background-color: var(--theme-thumb);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--theme-track);
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--theme-track);
+}
+
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: var(--theme-thumb);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--theme-thumb);
+}
+
+::-webkit-resizer {
+  background-color: var(--theme-thumb);
+}
+/*/-[GLOBAL]-/*/
+
+p {
+  font-size: 1em;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--theme-link);
+}
+
+/*/-[LOGO]-/*/
+
+svg .icon-main,
+svg [data-svg-path="logo_main"] {
+  fill: var(--theme-iconMain);
+}
+svg .icon-base,
+svg [data-svg-path="logo_base"] {
+  fill: var(--theme-iconBase);
+}
+
+svg[data-status="disabled"] * {
+  fill: var(--theme-disabled);
+}
