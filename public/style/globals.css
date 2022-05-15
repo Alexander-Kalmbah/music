@@ -1,32 +1,35 @@
 :root {
-  --theme-base:rgba(53,53,53,1);
-  --theme-distant:rgba(96,96,96,1);
-  --theme-nearest:rgba(39,39,39,1);
-  --theme-nearest-high:rgba(34,31,30,1);
+  --theme-base: rgba(53, 53, 53, 1);
+  --theme-distant: rgba(96, 96, 96, 1);
+  --theme-nearest: rgba(39, 39, 39, 1);
+  --theme-nearest-high: rgba(34, 31, 30, 1);
 
-  --theme-main:rgba(246,247,232,1);
-  --theme-primary:rgba(246,247,232,1);
-  --theme-secondary:rgba(202,195,195,1);
+  --theme-main: rgba(246, 247, 232, 1);
+  --theme-primary: rgba(246, 247, 232, 1);
+  --theme-secondary: rgba(202, 195, 195, 1);
 
-  --theme-selection:rgba(53,53,53,1);
-  --theme-selectionBase:rgba(246,247,232,1);
+  --theme-selection: rgba(53, 53, 53, 1);
+  --theme-selectionBase: rgba(246, 247, 232, 1);
 
-  --theme-thumb:rgba(145,145,145,1);
-  --theme-track:rgba(14, 14, 14, 1);
+  --theme-thumb: rgba(145, 145, 145, 1);
+  --theme-track: rgba(14, 14, 14, 1);
 
-  --theme-disabled:rgba(120,120,120,1);
-  --theme-marked:rgba(252,163,17,1);
-  --theme-active:rgba(252,163,17,1);
-  --theme-link:rgba(252,163,17,1);
-  --theme-active-low:rgba(252,163,17,1);
-  --theme-active-high:rgba(252,163,17,1);
+  --theme-disabled: rgba(120, 120, 120, 1);
+  --theme-marked: rgba(252, 163, 17, 1);
+  --theme-active: rgba(252, 163, 17, 1);
+  --theme-link: rgba(252, 163, 17, 1);
+  --theme-active-low: rgba(252, 163, 17, 1);
+  --theme-active-high: rgba(252, 163, 17, 1);
 
-  --theme-iconBase:rgba(255,255,255,1);
-  --theme-iconMain:rgba(252,163,17,1);
+  --theme-iconBase: rgba(255, 255, 255, 1);
+  --theme-iconMain: rgba(252, 163, 17, 1);
 
-  --theme-success: rgba(53,252,17,1);
-  --theme-warning: rgba(252,79,17,1);
-  --theme-failure: rgba(252,17,17,1);
+  --theme-success: rgba(53, 252, 17, 1);
+  --theme-warning: rgba(252, 79, 17, 1);
+  --theme-failure: rgba(252, 17, 17, 1);
+
+  --theme-screen: rgba(40, 40, 40, 0.4);
+  --theme-shadow: rgba(0, 0, 0, 0.3);
 }
 
 /* CURSOR */
@@ -48,10 +51,13 @@
 :root {
   --font-size: 20px;
   --font-weight: 400;
-  --font-height: 100%;
 }
 /* FONT */
-
+/* SHADOW */
+:root {
+  --shadow: 0 0 10px 5px var(--theme-shadow);
+}
+/* SHADOW */
 
 /*/-[RESET]-/*/
 
@@ -82,13 +88,12 @@ select {
 
 @media (prefers-reduced-motion: reduce) {
   * {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
-
 
 /*/-[BASE]-/*/
 
@@ -96,7 +101,6 @@ html {
   font-family: Main, sans-serif;
   font-size: 20px;
   font-weight: 400;
-  line-height: 100%;
   font-style: normal;
   background: #221f1e;
   color: #cac3c3;
@@ -121,7 +125,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-
 
 /*/-[GENERAL]-/*/
 ::selection {

@@ -1,0 +1,119 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999;
+  overflow: hidden;
+}
+
+.loader.-show {
+  visibility: visible;
+  opacity: 1;
+}
+.loader.-hide {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  background: var(--theme-screen);
+  z-index: 1;
+}
+
+.view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  user-select: none;
+}
+
+.spin_wrapper {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+  z-index: 3;
+}
+.spin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid var(--theme-nearest);
+  border-top-color: var(--theme-active);
+  box-sizing: border-box;
+  box-shadow: 0 0 10px 5px var(--theme-shadow),
+    0 0 10px 5px var(--theme-shadow) inset;
+  animation: spin var(--animation-tf) infinite 1.4s;
+}
+
+.spin_claw {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-top: 3px solid var(--theme-active);
+  box-sizing: border-box;
+  animation: spin var(--animation-tf) infinite 1.4s;
+}
+
+.spin_claw.claw_low {
+  top: 20%;
+  left: 20%;
+  width: 50%;
+  height: 50%;
+  animation: spin var(--animation-tf) infinite 1s;
+}
+.spin_claw.claw_medium {
+  top: 10%;
+  left: 10%;
+  width: 75%;
+  height: 75%;
+  animation: spin var(--animation-tf) infinite 1.2s;
+}
+.spin_claw.claw_high {
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  animation: spin var(--animation-tf) infinite 1.4s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes wavesBorderColor {
+  0% {
+    border-color: var(--theme-disabled);
+  }
+  50% {
+    border-color: var(--theme-active);
+  }
+  100% {
+    border-color: var(--theme-disabled);
+  }
+}
